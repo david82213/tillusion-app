@@ -16,6 +16,12 @@ router.get('/places', function(req, res, next) {
   });
 });
 
+router.get('/places/:location', function(req, res, next) {
+  Location.findById({_id: req.params.location}).then(function(location){
+    res.send(location);
+  }).catch(next);
+})
+
 // add new location
 router.post('/places', function(req, res, next) {
   Location.create(req.body).then(function(location){

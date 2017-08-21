@@ -15,7 +15,25 @@ const geoSchema = new Schema({
 
 // create location schema and model
 const locationSchema = new Schema({
-  name: {
+  locationName: {
+    type: String
+  },
+  description: {
+    type: String
+  },
+  zipCode: {
+    type: String
+  },
+  province: {
+    type: String
+  },
+  country: {
+    type: String
+  },
+  city: {
+    type: String,
+  },
+  address: {
     type: String
   },
   geometry: geoSchema
