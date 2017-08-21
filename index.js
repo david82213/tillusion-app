@@ -10,7 +10,6 @@ const app = express();
 mongoose.connect('mongodb://localhost/tillusion', { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
-
 app.use(bodyParser.json());
 
 // initialize routes
